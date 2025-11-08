@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+- name: Exemplo de uso do token
+  run: echo "Usando token $GITHUB_TOKEN"
+  env:
+    GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
   release:
